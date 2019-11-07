@@ -1,0 +1,31 @@
+#root {
+}
+textarea {
+    width: 300px;
+    height: 250px;
+}
+.rowThis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.columnThis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.code-box {
+    width: 306px;
+}
+.buttons button {
+    margin: 10px;
+    background: lightblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    transform: 1s;
+    button:active {
+        background: darken(lightblue, 10%)
+        translate:
+    }
+}
