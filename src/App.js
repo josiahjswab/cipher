@@ -16,7 +16,6 @@ export default class App extends React.Component {
     }
 
     travel(event) {
-        // console.log(event);
         if(!!event.encodedValue) {
             this.setState({encodedValue: event.encodedValue});
         } else if(!!event.encodedMess) {
@@ -33,7 +32,6 @@ export default class App extends React.Component {
         this.setState({encodedMess: encodedMess});
     }
     clickHandler2() {
-        console.log(this.state.encodedMess.split(','));
         let encodedValue = '';
         let decodeThis = this.state.encodedMess.split(',');
         for(var i=0; i < decodeThis.length; i++) {
@@ -46,7 +44,7 @@ export default class App extends React.Component {
         return (
             <div className='container'>
                 <div className='header'>
-                    <h1>Zeypher Cipher</h1>
+                    <h1>Unicode Cipher</h1>
                 </div>
                 <div className='rowThis'>
                     <Encode 

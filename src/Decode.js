@@ -24,9 +24,11 @@ export default class Decode extends React.Component {
 
         return (
             <div className='code-box'>
-                <h3>If you received a secret message:</h3>
-                <p>Input your coded message into the Decode text-area and click the cooresponding arrow.</p>
-                <h4>Decode:</h4>
+                <div>
+                    <h3>Receive a unicode message:</h3>
+                    <p>Input your coded message into the Decode text-area and click the cooresponding arrow.</p>
+                    <h4>Decode:</h4>
+                </div>
                 <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} >
 
                 </textarea>
