@@ -55,6 +55,22 @@ textarea {
     div h4 {
         color: red;
     }
+    .copy-textarea {
+        margin: 5px auto 0 auto;
+        background: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius: 3px;
+        outline: none;
+        transition: .2s;
+        width: 80px;
+        height: 20px;
+        
+    }
+    .copy-textarea:active {
+        background: lightgrey;
+        transform: translateY(1px);
+    }
+    
 }
 .buttons{
     display: flex;
@@ -64,7 +80,7 @@ textarea {
         margin: 10px;
         background: rgb(255, 255, 255);
         border: 1px solid black;
-        border-radius: 10px;
+        border-radius: 3px;
         outline: none;
         transition: .2s;
         width: 80px;
@@ -73,12 +89,14 @@ textarea {
     }
     button:active {
         background: lightgrey;
-        transform: translateY(2px);
+        transform: translateY(1px);
     }
     #clear-button {
         background-color: rgba(255, 235, 52, 0.774);
     }
-
+    #clear-button:active {
+        background-color: rgb(182, 79, 31);
+    }
 } 
 .footer {
     background: rgba(255, 255, 255, 0.575);
@@ -86,4 +104,18 @@ textarea {
     font-size: 8px;
     text-align: center;
     margin: 10px auto;
+    .footer-button {
+        margin: 5px;
+        background: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius: 3px;
+        outline: none;
+        transition: .2s;
+        width: 80px;
+        height: 20px;
+    }
+    .footer-button:active {
+        background: lightgrey;
+        transform: translateY(1px);
+    }
 }

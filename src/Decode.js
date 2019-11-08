@@ -29,9 +29,9 @@ export default class Decode extends React.Component {
                     <p>Input your coded message into the Decode text-area.</p>
                     <h4>Decode:</h4>
                 </div>
-                <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} placeholder='Place text you want to decode here then click the button decode.'>
+                <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} placeholder='Place text you want to decode here then click the button decode.'></textarea>
+                <button className='copy-textarea' onClick={() => {navigator.clipboard.writeText(this.state.encodedMess)}}>Copy</button>
 
-                </textarea>
             </div>
         );
     }

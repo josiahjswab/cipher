@@ -19,6 +19,12 @@ export default class Encode extends React.Component {
         });
     }
 
+    copy() {
+        this.state.encodedValue.select();
+        document.execCommand('copy');
+        e.target.focus();
+    }
+
     render() {
         return (
             <div className='code-box'>
@@ -28,6 +34,7 @@ export default class Encode extends React.Component {
                     <h4>Encode:</h4>
                 </div>
                 <textarea name='encodedValue' value={this.state.encodedValue} onChange={this.handleChange} placeholder='Place what you want encoded here then click the button encode.'></textarea>
+                <button className='copy-textarea' onClick={() => {navigator.clipboard.writeText(this.state.encodedValue)}}>Copy</button>
             </div>
         );
     }
