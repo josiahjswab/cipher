@@ -8,11 +8,13 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 #root {
+    padding: 0 0 50px 0;
 }
 textarea {
     width: 300px;
     height: 250px;
 }
+
 .header {
     text-align: center;
     background: rgba(255, 255, 255, 0.575);
@@ -24,6 +26,12 @@ textarea {
     flex-direction: row;
     justify-content: center;
 }
+@media only screen and (max-width: 800px) {
+    .rowThis {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 .columnThis {
     display: flex;
     flex-direction: column;
@@ -39,6 +47,9 @@ textarea {
     border: 1px solid black;
     border-radius: 3px;
     padding: 10px;
+    div h4 {
+        color: red;
+    }
 }
 .buttons{
     button {
@@ -48,7 +59,7 @@ textarea {
         border-radius: 10px;
         outline: none;
         transition: .2s;
-        width: 30px;
+        width: 80px;
         height: 30px;
 
     }

@@ -52,8 +52,8 @@ export default class App extends React.Component {
                         travel={this.travel}
                     />
                     <div className='columnThis buttons'>
-                        <button onClick={this.clickHandler}>▶︎</button>
-                        <button onClick={this.clickHandler2}>◀︎</button>
+                        <button onClick={this.clickHandler}>Encode</button>
+                        <button onClick={this.clickHandler2}>Decode</button>
                     </div>
                     <Decode 
                         encodedMess={this.state.encodedMess}

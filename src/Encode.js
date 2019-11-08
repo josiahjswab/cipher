@@ -27,7 +27,7 @@ export default class Encode extends React.Component {
                     <p>Input your message into the Encode text-area and click the corresponding arrow.</p>
                     <h4>Encode:</h4>
                 </div>
-                <textarea name='encodedValue' value={this.state.encodedValue} onChange={this.handleChange}></textarea>
+                <textarea name='encodedValue' value={this.state.encodedValue} onChange={this.handleChange} placeholder='Place what you want encoded here then click the button encode.'></textarea>
             </div>
         );
     }

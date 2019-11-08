@@ -29,7 +29,7 @@ export default class Decode extends React.Component {
                     <p>Input your coded message into the Decode text-area and click the cooresponding arrow.</p>
                     <h4>Decode:</h4>
                 </div>
-                <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} >
+                <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} placeholder='Place text you want to decode here then click the button decode.'>
 
                 </textarea>
             </div>
