@@ -12,6 +12,7 @@ export default class App extends React.Component {
 
         this.clickHandler = this.clickHandler.bind(this);
         this.clickHandler2 = this.clickHandler2.bind(this);
+        this.clickHandler3 = this.clickHandler3.bind(this);
         this.travel = this.travel.bind(this);
     }
 
@@ -39,6 +40,12 @@ export default class App extends React.Component {
         }
         this.setState({encodedValue: encodedValue});
     }
+    clickHandler3() {
+        this.setState({
+            encodedValue: '',
+            encodedMess: ''
+        });
+    }
  
     render() {
         return (
@@ -51,9 +58,10 @@ export default class App extends React.Component {
                         encodedValue={this.state.encodedValue}
                         travel={this.travel}
                     />
-                    <div className='columnThis buttons'>
+                    <div className='columnThis, buttons'>
                         <button onClick={this.clickHandler}>Encode</button>
                         <button onClick={this.clickHandler2}>Decode</button>
+                        <button id='clear-button' onClick={this.clickHandler3}>Clear</button>
                     </div>
                     <Decode 
                         encodedMess={this.state.encodedMess}

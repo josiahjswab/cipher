@@ -26,7 +26,7 @@ export default class Decode extends React.Component {
             <div className='code-box'>
                 <div>
                     <h3>Receive a unicode message:</h3>
-                    <p>Input your coded message into the Decode text-area and click the cooresponding arrow.</p>
+                    <p>Input your coded message into the Decode text-area.</p>
                     <h4>Decode:</h4>
                 </div>
                 <textarea name='encodedMess' value={this.state.encodedMess} onChange={this.handleChange} placeholder='Place text you want to decode here then click the button decode.'>

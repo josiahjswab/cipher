@@ -23,8 +23,8 @@ export default class Encode extends React.Component {
         return (
             <div className='code-box'>
                 <div>
-                    <h3>To create a unicode message:</h3>
-                    <p>Input your message into the Encode text-area and click the corresponding arrow.</p>
+                    <h3>Create a unicode message:</h3>
+                    <p>Input your message into the Encode text-area.</p>
                     <h4>Encode:</h4>
                 </div>
                 <textarea name='encodedValue' value={this.state.encodedValue} onChange={this.handleChange} placeholder='Place what you want encoded here then click the button encode.'></textarea>
