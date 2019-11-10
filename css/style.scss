@@ -17,12 +17,12 @@ body {
     padding: 10px;
     margin: 0 0 20px 0;
 }
-.rowThis {
+.row-this {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.columnThis {
+.column-this {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +37,7 @@ body {
     border: 1px solid black;
     border-radius: 3px;
     padding: 10px;
+    margin: 5px;
     div h4 {
         color: red;
     }
@@ -45,7 +46,7 @@ body {
         height: 400px;
         margin: 20px;
     }
-    .copy-textarea {
+    div .copy-textarea {
         margin: 5px auto 0 auto;
         background: rgb(255, 255, 255);
         border: 1px solid black;
@@ -54,40 +55,20 @@ body {
         transition: .2s;
         width: 80px;
         height: 20px;
-        
     }
-    .copy-textarea:active {
+    
+    div .copy-textarea:active {
         background: lightgrey;
         transform: translateY(1px);
+    }
+    div .green-button {
+        background: greenyellow;
+    }
+    div .yellow-button {
+        background: rgba(255, 235, 52, 0.774);
     }
     
 }
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    button {
-        margin: 10px;
-        background: rgb(255, 255, 255);
-        border: 1px solid black;
-        border-radius: 3px;
-        outline: none;
-        transition: .2s;
-        width: 80px;
-        height: 30px;
-
-    }
-    button:active {
-        background: lightgrey;
-        transform: translateY(1px);
-    }
-    #clear-button {
-        background-color: rgba(255, 235, 52, 0.774);
-    }
-    #clear-button:active {
-        background-color: rgb(182, 79, 31);
-    }
-} 
 .footer {
     background: rgba(255, 255, 255, 0.575);
     max-width: 400px;
@@ -110,13 +91,9 @@ body {
     }
 }
 @media only screen and (max-width: 800px) {
-    .rowThis {
+    .row-this {
       flex-direction: column;
       align-items: center;
-    }
-    .buttons {
-        flex-direction: row;
-
     }
     .code-box {
         max-width: 260px;

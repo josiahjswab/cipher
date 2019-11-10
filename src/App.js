@@ -12,11 +12,12 @@ export default class App extends React.Component {
 
         this.clickHandler = this.clickHandler.bind(this);
         this.clickHandler2 = this.clickHandler2.bind(this);
-        this.clickHandler3 = this.clickHandler3.bind(this);
+        this.clearEncoded = this.clearEncoded.bind(this);
+        this.clearDecoded = this.clearDecoded.bind(this);
         this.travel = this.travel.bind(this);
     }
 
-    travel(event) {
+    travel(event) { //callback fucntion to populate state across the components.
         if(!!event.encodedValue) {
             this.setState({encodedValue: event.encodedValue});
         } else if(!!event.encodedMess) {
@@ -40,9 +41,13 @@ export default class App extends React.Component {
         }
         this.setState({encodedValue: encodedValue});
     }
-    clickHandler3() {
+    clearEncoded() {
         this.setState({
-            encodedValue: '',
+            encodedValue: ''
+        });
+    }
+    clearDecoded() {
+        this.setState({
             encodedMess: ''
         });
     }
@@ -53,24 +58,31 @@ export default class App extends React.Component {
                 <div className='header'>
                     <h1>Unicode Cipher</h1>
                 </div>
-                <div className='rowThis'>
+                <div className='row-this'>
                     <Encode 
                         encodedValue={this.state.encodedValue}
                         travel={this.travel}
+                        clickHandler={this.clickHandler}
+                        clearEncoded={this.clearEncoded}
                     />
-                    <div className='columnThis, buttons'>
-                        <button onClick={this.clickHandler}>Encode</button>
-                        <button onClick={this.clickHandler2}>Decode</button>
-                        <button id='clear-button' onClick={this.clickHandler3}>Clear</button>
+                    <div className='columnThis buttons'>
+                        {/* <button onClick={this.clickHandler}>Encode</button> */}
+                        {/* <button onClick={this.clickHandler2}>Decode</button> */}
+                        {/* <button id='clear-button' onClick={this.clickHandler3}>Clear</button> */}
                     </div>
                     <Decode 
                         encodedMess={this.state.encodedMess}
                         travel={this.travel}
+                        clickHandler2={this.clickHandler2}
+                        clearDecoded={this.clearDecoded}
                     />
                 </div>
                 <div className='footer'>
                     <p>104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 106, 111, 115, 105, 97, 104, 106, 115, 119, 97, 98, 47, 99, 105, 112, 104, 101, 114, </p>
-                    <button className='footer-button' onClick={() => {navigator.clipboard.writeText("104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 106, 111, 115, 105, 97, 104, 106, 115, 119, 97, 98, 47, 99, 105, 112, 104, 101, 114, ")}}>Copy</button>
+                    <button 
+                        className='footer-button' 
+                        onClick={() => {navigator.clipboard.writeText("104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 106, 111, 115, 105, 97, 104, 106, 115, 119, 97, 98, 47, 99, 105, 112, 104, 101, 114, ")}}>Copy
+                    </button>
                 </div>
             </div>
         );
