@@ -1,4 +1,4 @@
-# Unicode Cipher 
+# 🔓 Unicode Cipher 🔒
 
 Welcome to the unicode cipher project. This project was built as to excercise my React.
 
