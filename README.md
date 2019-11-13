@@ -1,10 +1,10 @@
-# Unicode Cipher
+# Unicode Cipher 
 
 Welcome to the unicode cipher project. This project was built as to excercise my React.
 
 Install dependancies with:
 ```
-$npm install
+$ npm install
 ```
 
 ## Points of interest in this app build:
